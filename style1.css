@@ -1,5 +1,5 @@
 html body { height: 100%; width: 100%;}
-
+/* Barra de navegación */
 .navbar{ 
     display: flex; 
     background-color: cadetblue;
@@ -10,7 +10,7 @@ html body { height: 100%; width: 100%;}
 
 .navbar_logo{ display: flex;
     height: 35%;
-    width: 1.6%;
+    width: .8%;
     padding-top: 1.4%;
     padding-left: .5%;}
 
@@ -38,11 +38,14 @@ html body { height: 100%; width: 100%;}
     width: 80%;
     padding-top: .7% ;}
 
-input{ 
-    border: solid grey 3px;
+.navbar_buscar input{ 
+    border: solid transparent 3px;
     border-radius: 40px;
-    width: 100%; 
-    padding: 1%;}
+    width: 100%;
+    height: 20%; 
+    padding: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9em ;}
 
 .navbar_actual{
     display: flex;
@@ -60,6 +63,37 @@ input{
 .navbar_profile {
     display: flex;
     height: 45%;
+    width: 1.5%;
+    padding-top: 1%;}
+
+.navbar_f{ display: flex;
+    height: 35%;
     width: 2%;
-    padding-top: 1%;
-}
+    padding-top: 1.2%;}
+
+/* Cuerpo de la pagina */
+.container{ 
+    display: inline-flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    margin-left: 5%;
+    margin-right: 5%;}
+
+.imagen-verti{ display: inline;}
+
+.imagen-semiverti{ display: inline;}
+
+.imagen-hori{ display: inline;}
+
+.imagen-semiverti{display: inline;
+    height: 10%;
+    width: 15%;
+    margin: 1em;
+    border-radius: 10%;}
+
+.imagen-cuadrada{
+    display: inline;
+    height: 10%;
+    width: 15%;
+    margin: 1em;
+    border-radius: 10%;}
