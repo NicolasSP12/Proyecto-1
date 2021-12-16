@@ -10,14 +10,16 @@ html body { height: 100%; width: 100%;}
     top: 0px;
     margin-bottom: .3%;
     background-color: white;
-    z-index: 10;}
+    z-index: 99;}
 
-.navbar_logo{ display: flex;
+.navbar_logo{ 
+    display: flex;
     height: 35%;
     width: .9%;
     padding-top: 1.4%;
     padding-left: 1%;
-    padding-right: .5%;}
+    padding-right: .5%;
+    cursor: pointer;}
 
 .navbar_button{ 
     display: flex;
@@ -33,7 +35,8 @@ html body { height: 100%; width: 100%;}
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: 700;
-    justify-content: space-between;} 
+    justify-content: space-between;
+    cursor: pointer;} 
 
 .buttonblack{
     background-color: black;
@@ -83,24 +86,29 @@ html body { height: 100%; width: 100%;}
     display: flex;
     height: 30%;
     width: 1.5%;
-    padding-top: 1.2%;}
+    padding-top: 1.2%;
+    cursor: pointer;}
 
 .navbar_mensaj{
     display: flex;
     height: 35%;
     width: 1.5%;
-    padding-top: 1.2%;}
+    padding-top: 1.2%;
+    cursor: pointer;}
 
 .navbar_profile {
     display: flex;
     height: 35%;
     width: 1.5%;
-    padding-top: 1.2%;}
+    padding-top: 1.2%;
+    cursor: pointer;}
 
-.navbar_f{ display: flex;
+.navbar_f{ 
+    display: flex;
     height: 35%;
     width: 2%;
-    padding-top: 1.2%;}
+    padding-top: 1.2%;
+    cursor: pointer;}
 
 /* Cuerpo de la pagina */
 .container{ 
@@ -113,14 +121,14 @@ html body { height: 100%; width: 100%;}
     vertical-align: middle;}
 
 .imagen-semihori{ 
-    background-color: black;
     display: flex;
     height: 384px;
     width: 240px;
     margin-bottom: 16px; 
     margin-left: 8px; 
     margin-right: 8px;
-    border-radius: 8%;}
+    border-radius: 8%;
+    z-index: 1;}
 
 .imagen-cuadrada{
     background-color: black;
@@ -130,37 +138,77 @@ html body { height: 100%; width: 100%;}
     margin-bottom: 16px; 
     margin-left: 8px; 
     margin-right: 8px;
+    border-radius: 10%;
+    z-index: 1;}
+
+.imagen-cuadrada img{
+    display: flex; 
+    width: 100%; 
     border-radius: 10%;}
 
-.imagen-cuadrada img{ height: 100%; width: 100%; border-radius: 10%;}
+.imagen-semihori img{
+    display: flex; 
+    width: 100%; 
+    border-radius: 8%;}
 
-.imagen-semihori img {height: 100%; width: 100%; border-radius: 8%;}
+.imagen-cuadrada:hover{
+    opacity: .7;
+    cursor:zoom-in;}
 
-.imagena:hover{
-    opacity: .7;}
-
-.imagen-guar{
+.imagen-semihori:hover{
+    opacity: .7;
+    cursor:zoom-in;}
+ 
+.imagen-guar button{
     background-color: red;
+    align-items: center;
     color: white;
-    display: flex;
-    flex-direction: row;
-    height: 13%;
-    padding-top: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
+    display: none;
+    height: 12%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     font-weight: 600;
     position: relative;
-    top: 10px; right: 90px;
+    top: 5%; right: 120%;
     border-radius: 100px;
-    border: transparent solid 0px;}
+    border: transparent solid 0px;
+    cursor: pointer;}
 
-.imagen-guar:hover{ 
+.imagen-guar button:hover{
+    display: flex;
     background-color: rgb(180, 42, 42);
     opacity: 1;
-    visibility: visible;}
+    cursor: pointer;}
 
+.Descarga { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 200px;}
+
+.Descarga button{
+    background-color: white;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top: 85%; right: 220%;
+    border-radius: 100px;
+    border: transparent solid 0px;
+    cursor: pointer;}
+
+.Descarga button:hover{
+    display: flex;
+    background-color: rgb(163, 163, 163);
+    opacity: 1;
+    cursor: pointer;}
+
+.imagen-cuadrada:hover .Descarga button{ display: flex; top: 80%}
+.imagen-semihori:hover .Descarga button{display: flex;}
+.imagen-semihori:hover .imagen-guar button{ display: flex;}
+.imagen-cuadrada:hover .imagen-guar button{ display: flex; height:18%} 
 
 /* Media Queries */
 
@@ -317,6 +365,8 @@ html body { height: 100%; width: 100%;}
     .imagen-cuadrada {
         height:180px;
         width: 180px}
+    .Descarga button{ height: 30px; width: 30px; right: 250%;}
+    .imagen-guar button{ height: 15%;}
 }
 @media only screen and (max-width:400px){
     .imagen-semihori {
