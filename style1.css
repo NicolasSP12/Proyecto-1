@@ -1,6 +1,6 @@
 html body { height: 100%; width: 100%;}
 /* Barra de navegación */
-.navbar{ 
+#navbar-pinterest{ 
     display: flex; 
     height: 70px; 
     width: 100%;
@@ -12,7 +12,7 @@ html body { height: 100%; width: 100%;}
     background-color: white;
     z-index: 99;}
 
-.navbar_logo{ 
+#pinterest-icon{ 
     display: flex;
     height: 35%;
     width: .9%;
@@ -55,7 +55,7 @@ html body { height: 100%; width: 100%;}
     box-shadow: 0 4px #666;
     transform: translateY(2px)} */
 
-.navbar_buscar{
+.finder{
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -67,7 +67,7 @@ html body { height: 100%; width: 100%;}
     border-radius: 40px;
     background-color: rgb(241, 241, 241);}
 
-.navbar_buscar input{ 
+.finder input{ 
     border: solid transparent 10px;
     border-radius: 40px;
     width: 100%;
@@ -82,28 +82,28 @@ html body { height: 100%; width: 100%;}
     color: black;
     transition: 0.2s;}
 
-.navbar_actual{
+#notifications{
     display: flex;
     height: 30%;
     width: 1.5%;
     padding-top: 1.2%;
     cursor: pointer;}
 
-.navbar_mensaj{
+#message{
     display: flex;
     height: 35%;
     width: 1.5%;
     padding-top: 1.2%;
     cursor: pointer;}
 
-.navbar_profile {
+#profile-img {
     display: flex;
     height: 35%;
     width: 1.5%;
     padding-top: 1.2%;
     cursor: pointer;}
 
-.navbar_f{ 
+#more-arrow{ 
     display: flex;
     height: 35%;
     width: 2%;
@@ -111,7 +111,7 @@ html body { height: 100%; width: 100%;}
     cursor: pointer;}
 
 /* Cuerpo de la pagina */
-.container{ 
+#content{ 
     margin-left: 1%;
     margin-right: 1%;
     display: flex;
@@ -120,7 +120,7 @@ html body { height: 100%; width: 100%;}
     justify-content: center;
     vertical-align: middle;}
 
-.imagen-semihori{ 
+.card-image1{ 
     display: flex;
     height: 384px;
     width: 240px;
@@ -130,7 +130,7 @@ html body { height: 100%; width: 100%;}
     border-radius: 8%;
     z-index: 1;}
 
-.imagen-cuadrada{
+.card-image2{
     background-color: black;
     display: flex;
     height: 240px;
@@ -141,21 +141,21 @@ html body { height: 100%; width: 100%;}
     border-radius: 10%;
     z-index: 1;}
 
-.imagen-cuadrada img{
+.card-image2 img{
     display: flex; 
     width: 100%; 
     border-radius: 10%;}
 
-.imagen-semihori img{
+.card-image1 img{
     display: flex; 
     width: 100%; 
     border-radius: 8%;}
 
-.imagen-cuadrada:hover{
+.card-image2:hover{
     opacity: .7;
     cursor:zoom-in;}
 
-.imagen-semihori:hover{
+.card-image1:hover{
     opacity: .7;
     cursor:zoom-in;}
  
@@ -205,59 +205,59 @@ html body { height: 100%; width: 100%;}
     opacity: 1;
     cursor: pointer;}
 
-.imagen-cuadrada:hover .Descarga button{ display: flex; top: 80%}
-.imagen-semihori:hover .Descarga button{display: flex;}
-.imagen-semihori:hover .imagen-guar button{ display: flex;}
-.imagen-cuadrada:hover .imagen-guar button{ display: flex; height:18%} 
+.card-image2:hover .Descarga button{ display: flex; top: 80%}
+.card-image1:hover .Descarga button{display: flex;}
+.card-image1:hover .imagen-guar button{ display: flex;}
+.card-image2:hover .imagen-guar button{ display: flex; height:18%} 
 
 /* Media Queries */
 
 @media only screen and (max-width:1700px){
-    .navbar{ 
+    #navbar-pinterest{ 
         height: 70px; 
         width: 100%;}
-    .navbar_buscar{
+    .finder{
         height: 60%;
         width: 75%;} 
     .navbar_button button{ 
         height: 43px;
         width: 58px;}
-    .imagen-semihori {
+    .card-image1 {
         height: 520px;
         width: 320px}
-    .imagen-cuadrada {
+    .card-image2 {
         height:320px;
         width: 320px;}
 
 }
 
 @media only screen and (max-width:1500px){
-    .navbar_buscar{
+    .finder{
         height: 60%;
         width: 70%;}
     .navbar_button button{ 
         height: 40px;
         width: 55px;}
-    .imagen-semihori {
+    .card-image1 {
         height: 520px;
         width: 320px}
-    .imagen-cuadrada {
+    .card-image2 {
         height:320px;
         width: 320px}
 }
 
 @media only screen and (max-width:1375px){
-    .imagen-semihori {
+    .card-image1 {
         height: 390px;
         width: 270px}
-    .imagen-cuadrada {
+    .card-image2 {
         height:270px;
         width: 270px}
 }
 
 
 @media only screen and (max-width:1273px){
-    .navbar{ 
+    #navbar-pinterest{ 
         display: flex; 
         height: 65px; 
         width: 100%;
@@ -267,7 +267,7 @@ html body { height: 100%; width: 100%;}
         top: 0px;
         margin-bottom: .3%;
         background-color: white;}
-    .navbar_buscar{
+    .finder{
         height: 60%;
         width: 68;}
     .navbar_button button{ 
@@ -277,10 +277,10 @@ html body { height: 100%; width: 100%;}
 }
 
 @media only screen and (max-width:1100px){
-    .navbar{ 
+    #navbar-pinterest{ 
         height: 60px; 
         width: 100%;}
-    .navbar_buscar{
+    .finder{
         height: 60%;
         width: 68%;}
     .navbar_button button{ 
@@ -290,55 +290,55 @@ html body { height: 100%; width: 100%;}
 }
 
 @media only screen and (max-width:900px){
-    .navbar{ 
+    #navbar-pinterest{ 
         height: 55px; 
         width: 100%;}
-    .navbar_buscar{
+    .finder{
         height: 60%;
         width:80%;}
-    .navbar_actual{display: none;}
-    .navbar_mensaj{display: none}
-    .navbar_profile {display: none }
-    .navbar_f{ display: none}
+    #notifications{display: none;}
+    #message{display: none}
+    #profile-img {display: none }
+    #more-arrow{ display: none}
     .navbar_button button{
         height: 35px;
         width: 45px;}
-    .imagen-semihori {
+    .card-image1 {
         height: 490px;
         width: 320px}
-    .imagen-cuadrada {
+    .card-image2 {
         height:320px;
         width: 320px} 
 
 }
 
 @media only screen and (max-width:700px){
-    .navbar{ 
+    #navbar-pinterest{ 
         height: 45px; 
         width: 100%;}
-    .navbar_buscar{
+    .finder{
         height: 60%;
         width: 73%;}
-    .navbar_actual{display: none;}
-    .navbar_mensaj{display: none}
-    .navbar_profile {display: none }
-    .navbar_f{ display: none}
+    #notifications{display: none;}
+    #message{display: none}
+    #profile-img {display: none }
+    #more-arrow{ display: none}
     .navbar_button button{
         height: 35px;
         width: 45px;}
-    .imagen-semihori {
+    .card-image1 {
         height: 380px;
         width: 280px}
-    .imagen-cuadrada {
+    .card-image2 {
         height:280px;
         width: 280px}
 }
 
 @media only screen and (max-width: 605px){
-    .imagen-semihori {
+    .card-image1 {
         height: 340px;
         width: 230px}
-    .imagen-cuadrada {
+    .card-image2 {
         height:230px;
         width: 230px
 }
@@ -346,42 +346,42 @@ html body { height: 100%; width: 100%;}
 
 @media only screen and (max-width:525px){
     .navbar_button{display:none}
-    .navbar_logo { width: 5%; height: 60%;}
-    .navbar_buscar{
+    #pinterest-icon { width: 5%; height: 60%;}
+    .finder{
         height: 60%;
         width: 85%;}
-    .imagen-semihori {
+    .card-image1 {
        height: 320px;
         width: 200px}
-    .imagen-cuadrada {
+    .card-image2 {
         height:200px;
         width: 200px}
 }
 
 @media only screen and (max-width:440px){
-    .imagen-semihori {
+    .card-image1 {
         height: 260px;
         width: 180px}
-    .imagen-cuadrada {
+    .card-image2 {
         height:180px;
         width: 180px}
     .Descarga button{ height: 30px; width: 30px; right: 250%;}
     .imagen-guar button{ height: 15%;}
 }
 @media only screen and (max-width:400px){
-    .imagen-semihori {
+    .card-image1 {
         height: 225px;
         width: 160px}
-    .imagen-cuadrada {
+    .card-image2 {
         height:160px;
         width: 160px}
 }
 
 @media only screen and (max-width:360px){
-    .imagen-semihori {
+    .card-image1 {
         height: 190px;
         width: 135px}
-    .imagen-cuadrada {
+    .card-image2 {
         height:135px;
         width: 135px}
 }
